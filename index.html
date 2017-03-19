@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Theme Demo</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="./slideshow/unslider.css">
+</head>
+<body>
+<header class="header-wrapper">
+    <div class="logo-wrap">
+        <div class="logo">LOGO</div>
+    </div>
+    <!--for flex layout use blank flex:1 to adjust the space-->
+    <div class="blank-adjust"></div>
+    <!-- just set the navigation menu item name non-dynamically, 'Home, About, Services' item to <li> element -->
+    <nav class="nav">
+        <a href="#" id="menu-icon"></a>
+        <ul class="ul">
+            <li class="active"><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <!--the submenu 'portfolio' has 3 static element for navigating to each detail page-->
+            <li class="dropdown">
+                <a href="#">PORTFOLIO</a>
+                <ul class="itemdown">
+                    <div class="itemdown-triangle"></div>
+                    <li><a href="#">> Portfolio 2 column page</a></li>
+                    <li><a href="#">> Portfolio 2 column page</a></li>
+                    <li><a href="#">> Portfolio 2 column page</a></li>
+                </ul>
+            </li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">FEATURES</a></li>
+            <li><a href="#">CONTACTS</a></li>
+            <li><a href="#" class="search">
+                <img src="./img/search.png" id="search">
+                <form>
+                    <input type="text" name="search" placeholder="Search..">
+                </form>
+            </a></li>
+        </ul>
+    </nav>
+</header>
+<!--use the unslider plugin for the slide show-->
+<div>
+    <div class="infinite-slider">
+        <ul class="slider-ul">
+            <li>
+                <div>
+                    <img src="img/bg.png"/>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="img/bg.png"/>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="img/bg.png"/>
+                </div>
+            </li>
+        </ul>
+        <!-- let the 'Caption' and 'Caption description' position absolute to the current slider part -->
+        <div class="slide-info">
+            <div class="slide-caption">
+                Caption here
+            </div>
+            <div class="slide-description">
+                <p>
+                    Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.
+                </p>
+            </div>
+        </div>
+        <!-- the plugin 'unslide' will automatically append the PREVIOUS and NEXT button (<a> element) content here... -->
+        <!--and the position of two appended the prev, next buttons are absolute -->
+    </div>
+
+</div>
+
+<!-- for content part -->
+<div class="content-wrapper">
+    <div class="content-text">
+        <div class="content-title">Some of our top services</div>
+        <div class="content-description">Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et
+            rutrum condimentum, libero lectus mattis orci, ut commodo.
+        </div>
+    </div>
+    <div class="content-text-right">
+        <div class="more-btn">VIEW MORE</div>
+    </div>
+</div>
+<script src="./jquery/jquery-3.2.0.min.js"></script>
+<script src="./slideshow/unslider.js"></script>
+<script src="./index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+/**
+ *   Here's where everything gets included. You don't need
+ *   to change anything here, and doing so might break
+ *   stuff. Here be dragons and all that.
+ */
+/**
+ *   Default variables
+ *
+ *   While these can be set with JavaScript, it's probably
+ *   better and faster to just set them here, compile to
+ *   CSS and include that instead to use some of that
+ *   hardware-accelerated goodness.
+ */
+.unslider {
+  position: relative;
+  background-color:#dddddd;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+.unslider-wrap {
+  position: relative;
+}
+.unslider-wrap.unslider-carousel > li {
+  float: left;
+}
+
+/* in case will not affect unslider css file create own style for
+*  styling the single slide
+*/
+.unslider-wrap.unslider-carousel > li > div{
+  background-image: url('../img/bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  float: left;
+}
+.unslider-wrap.unslider-carousel > li > div>img{
+  width: 100%;
+}
+.unslider-vertical > ul {
+  height: 100%;
+}
+.unslider-vertical li {
+  float: none;
+  width: 100%;
+}
+.unslider-fade {
+  position: relative;
+}
+.unslider-fade .unslider-wrap li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 8;
+}
+.unslider-fade .unslider-wrap li.unslider-active {
+  z-index: 10;
+}
+.unslider ul, .unslider ol, .unslider li {
+  list-style: none;
+  /* Reset any weird spacing */
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.unslider-arrow {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: #e2534b;
+  position: absolute;
+  left: 0px;
+  z-index: 2;
+  cursor: pointer;
+  padding:10px 10px;
+  color: #ffffff;
+  top:50%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.unslider-arrow:hover{
+  background: red;
+}
+.unslider-arrow.next {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: #e2534b;
+  left: auto;
+  right: 0px;
+  color: #ffffff;
+  padding: 10px 10px;
+  position: absolute;
+  top:50%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media screen and (max-width: 555px){
+  .unslider-arrow{
+    top:30%;
+  }
+  .unslider-arrow.next{
+    top:30%;
+  }
+}
+.unslider-arrow.next:hover{
+  background: red;
+}
+.unslider-nav ol {
+  list-style: none;
+  text-align: center;
+  background-color: #f3f3f3;
+}
+.unslider-nav ol li {
+  display: inline-block;
+  width: 39px;
+  height: 3px;
+  margin: 0 4px;
+  background-color: #b0b8b9;
+  overflow: hidden;
+  text-indent: -999em;
+  cursor: pointer;
+}
+.unslider-nav ol li.unslider-active {
+  background-color: #e2534b;
+  cursor: default;
+}
